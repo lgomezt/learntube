@@ -3,10 +3,9 @@ version: "3.8"
 services:
   backend:
     build: ./backend
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     volumes:
-      - ./backend:/app
       - sqlite-data:/app/data
     env_file:
       - .env
